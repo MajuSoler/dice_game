@@ -14,6 +14,7 @@ function App() {
 
   const [turnWinner, setTurnWinner] = useState(null);
 
+  const [activeButton, setActiveButton] = useState(false);
   const handleDiceCLick = (dice) => {
     if (dice === "1") {
       setDice1(randomDiceNumber);
@@ -35,12 +36,14 @@ function App() {
       setTotalPlayer2(totalPlayer2 + 1);
       setTurnWinner("Player 2");
     }
+    setActiveButton(true);
   };
 
   const newTurn = () => {
     setDice1(0);
     setDice2(0);
     setTurnWinner("");
+    setActiveButton(false);
   };
   return (
     <div className="App">
@@ -58,6 +61,7 @@ function App() {
           className="button"
           name="Roll"
           value="1"
+          disabled={activeButton}
           onClick={(e) => {
             handleDiceCLick(e.target.value);
           }}
@@ -68,6 +72,7 @@ function App() {
           className="button"
           name="Roll"
           value="2"
+          disabled={activeButton}
           onClick={(e) => {
             handleDiceCLick(e.target.value);
           }}
