@@ -1,0 +1,29 @@
+.scoreCardBody {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border: 2px black solid;
+  margin: 1rem 18rem 1rem 18rem;
+  border-radius: 1rem;
+}
+.player {
+  margin: 1rem;
+}
+.dice {
+  margin: 2rem;
+}
+.winner {
+  margin: 2rem;
+}
+.game {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 18rem 1rem 18rem;
+  padding: 2rem;
+}
+.buttons {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
